@@ -7,6 +7,7 @@ public class Inicio {
 		// TODO Auto-generated method stub
 		 // Hola mundo :D 
 		// Que tal!
+		//¿Cómo avanzamos el trabajo? :D :(
 		
 
 	}
