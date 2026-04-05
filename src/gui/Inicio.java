@@ -6,6 +6,8 @@ public class Inicio {
 		System.out.println("Hola");
 		// TODO Auto-generated method stub
 		 // Hola mundo :D 
+		// Que tal!
+		
 
 	}
 	
