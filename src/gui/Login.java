@@ -7,6 +7,8 @@ import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import java.awt.Color;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+
 import java.awt.Font;
 import javax.swing.border.LineBorder;
 import javax.swing.JTextField;
@@ -84,9 +86,22 @@ public class Login extends JFrame {
 		JButton btnIniciar = new JButton("INICIAR SESIÓN");
 		btnIniciar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				String user = txtUsuario.getText();
+				String password = new String(txtPassword.getPassword());
+			if (user.equals("admin") && password.equals("1234")) {
 				
+			JOptionPane.showMessageDialog(null, "¡Bienvenido Administrador!");
+			GestorAdministrativo principal = new GestorAdministrativo();
+			principal.setVisible(true);
+			principal.setLocationRelativeTo(null);
+			dispose();
+				} else {
+				JOptionPane.showMessageDialog(null, "Usuario o Clave incorrectos", "Error", JOptionPane.ERROR_MESSAGE);
+				txtUsuario.setText("");
+				txtPassword.setText("");
+				txtUsuario.requestFocus();
+				}
 			}
-			
 		});
 		btnIniciar.setBackground(new Color(188, 180, 214));
 		btnIniciar.setBounds(42, 144, 124, 23);
